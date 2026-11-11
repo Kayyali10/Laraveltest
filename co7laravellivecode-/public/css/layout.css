@@ -1,0 +1,160 @@
+
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f7f8fc;
+    --white: #ffffff;
+    --primary: #7861c9;
+    --primary-hover: #634bb5;
+    --text: #29283b;
+    --muted: #77778c;
+    --border: #e9e9f1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(30, 30, 60, 0.03);
+}
+
+.nav-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 17px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* Logout Button */
+
+.logout-form {
+    display: inline;
+}
+
+.logout-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid #ded8f2;
+    padding: 9px 19px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.logout-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* =========================
+   Main Content
+========================= */
+
+main {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    padding: 55px 24px;
+    min-height: calc(100vh - 145px);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.page-footer {
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    padding: 23px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 650px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 17px;
+    }
+
+    main {
+        padding: 35px 18px;
+    }
+}

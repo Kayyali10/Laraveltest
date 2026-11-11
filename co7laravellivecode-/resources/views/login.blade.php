@@ -34,6 +34,10 @@
             <button type="submit">Login</button>
         </form>
 
+         <p class="login-link">
+           Create an account?
+            <a href="/register">Register</a>
+        </p>
     </div>
 
     

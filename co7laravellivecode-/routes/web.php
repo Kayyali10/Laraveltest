@@ -7,19 +7,21 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ReigesterController;
 use App\Http\Controllers\LoginController;
 
-
-// Register
 Route::get('/', [ReigesterController::class, 'index'])
     ->name('register');
 
+// Display Register Page
+Route::get('/register', [ReigesterController::class, 'index'])
+    ->name('register');
+// Handle Register Form
 Route::post('/register', [ReigesterController::class, 'store'])
     ->name('register.store');
 
 
-// Login
+// Display Login Page
 Route::get('/login', [LoginController::class, 'index'])
     ->name('login');
-
+// Handle Login Form
 Route::post('/login', [LoginController::class, 'store'])
     ->name('login.store');
 
@@ -42,7 +44,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/contact', [PortfolioController::class, 'contact'])
         ->name('portfolio.contact');
 
+    // Profile Edit and Update
+ Route::get('/profile/edit', [PortfolioController::class, 'editProfile'])
+    ->name('profile.edit');
 
+Route::put('/profile/update', [PortfolioController::class, 'updateProfile'])
+    ->name('profile.update');
+    
     // Projects CRUD
     Route::resource('projects', ProjectsController::class);
 

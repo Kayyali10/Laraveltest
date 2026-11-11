@@ -38,6 +38,9 @@
             <label>Email</label>
             <input type="email" name="email" placeholder="Enter your email" value="{{ old('email') }}">
 
+            <label>Job Title</label>
+            <input type="text" name="job_title" placeholder="Enter your job title" value="{{ old('job_title') }}">
+
             <label>Password</label>
             <input type="password" name="password" placeholder="Enter your password">
 
